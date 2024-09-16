@@ -129,3 +129,6 @@ MEDIA_ROOT = BASE_DIR / 'images'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 定義したユーザーモデル
+AUTH_USER_MODEL = 'accounts.User'
