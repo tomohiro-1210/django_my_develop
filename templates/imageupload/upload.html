@@ -1,0 +1,20 @@
+{% extends 'bases/base.html' %}
+
+{% block site_title %}
+画像アップロード
+{% endblock site_title %}
+
+{% block content %}
+<div class="container mx-auto my-20">
+    <h2 class="text-xl md:text-2xl text-center text-blue-500 mb-4">画像アップロード</h2>
+    <form method="POST" class="w-full md:w-2/3 xl:w-1/2 mx-auto" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="pb-4">
+            {{ form.image }}
+        </div>
+        <div class="text-center">
+            <button type="submit" class="inline-flex p-4 items-center justify-center rounded-md bg-blue-950 px-6 font-medium text-blue-50 shadow-lg shadow-blue-500/20 transition active:scale-95">アップロードする</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
